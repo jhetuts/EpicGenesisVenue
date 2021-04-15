@@ -1,0 +1,192 @@
+{
+    "widgets": {
+        "hide": {
+            "SPONSOR": false,
+            "MANAGER": false
+        },
+        "enabledWidgets": "*"
+    },
+    "blocks": {
+        "enabledBlocks": "*",
+        "predefinedBlocks": {
+            "page-title-block": {
+                "type": "RichText",
+                "title": "Main Stage",
+                "data": {
+                    "heading": "Main Stage",
+                    "headingVisibility": false,
+                    "headingAlignment": "center",
+                    "textContent": "<p style=\"text-align: center;\"><span style=\"white-space:pre-wrap;\"><strong><span style=\"font-size: 32px;\">Main Stage</span></strong></span></p>",
+                    "order": 1,
+                    "alignment": "left",
+                    "blockWidth": "100%",
+                    "blockHeight": "fit-content",
+                    "fitHeightToContent": true,
+                    "boundingBox": false,
+                    "contentPadding": "0px"
+                }
+            },
+            "livestream-block": {
+                "type": "LiveStream",
+                "title": "Livestream",
+                "data": {
+                    "heading": "Livestream",
+                    "headingVisibility": false,
+                    "headingAlignment": "left",
+                    "livestreamTitle": "Livestream",
+                    "livestreamTitleVisibility": true,
+                    "streamingService": "youtube",
+                    "livestreamUrl": null,
+                    "displaySomethingWhenNotLive": "video",
+                    "displayImageWhenNotLive": null,
+                    "displayVideoWhenNotLive": null,
+                    "disableVideoQualityOptions": false,
+                    "disableAutoplay": true,
+                    "order": 2,
+                    "alignment": "left",
+                    "blockWidth": "100%",
+                    "blockHeight": "524px",
+                    "fitHeightToContent": false,
+                    "boundingBox": true,
+                    "contentPadding": "0px"
+                }
+            },
+            "agenda-block": {
+                "type": "Agenda",
+                "title": "Agenda",
+                "data": {
+                    "heading": "Agenda",
+                    "headingVisibility": true,
+                    "headingAlignment": "left",
+                    "blockLayout": "single",
+                    "agendaFromLivePage": "all",
+                    "enableBookmark": true,
+                    "layout": null,
+                    "mode": "light",
+                    "moderatorsVisibility": true,
+                    "panelistsVisibility": true,
+                    "sessionDescription": null,
+                    "sessionDescriptionVisibility": true,
+                    "sessionTitle": "Agenda",
+                    "sessionTitleVisibility": true,
+                    "speakersVisibility": true,
+                    "order": 3,
+                    "alignment": "left",
+                    "blockWidth": "50%",
+                    "blockHeight": "340px",
+                    "fitHeightToContent": false,
+                    "boundingBox": true,
+                    "contentPadding": "18px"
+                }
+            },
+            "resources-block": {
+                "type": "Resources",
+                "title": "Resources",
+                "data": {
+                    "heading": "Resources",
+                    "headingVisibility": true,
+                    "headingAlignment": "left",
+                    "ctaColor": "#e50072",
+                    "enableItemCTA": true,
+                    "enableItemIcon": true,
+                    "resources": [{
+                            "link": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/606aab4f55596000920cb94e/2522e30e-86a8-4895-9a8b-04da212dfae7/09slw/sample.pdf",
+                            "type": "pdf",
+                            "label": "Resource file name 1",
+                            "labelVisibility": true,
+                            "ctaIcon": "https://files-myxp.gevme.com/misc/purplePDF.svg",
+                            "ctaText": "Download"
+                        },
+                        {
+                            "link": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/606aab4f55596000920cb94e/2522e30e-86a8-4895-9a8b-04da212dfae7/K2oNC/sample.pdf",
+                            "type": "pdf",
+                            "label": "Resource file name 2",
+                            "labelVisibility": true,
+                            "ctaIcon": "https://files-myxp.gevme.com/misc/purplePDF.svg",
+                            "ctaText": "Download"
+                        },
+                        {
+                            "link": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/606aab4f55596000920cb94e/2522e30e-86a8-4895-9a8b-04da212dfae7/ECySR/sample.pdf",
+                            "type": "pdf",
+                            "label": "Resource file name 3",
+                            "labelVisibility": true,
+                            "ctaIcon": "https://files-myxp.gevme.com/misc/purplePDF.svg",
+                            "ctaText": "Download"
+                        }
+                    ],
+                    "order": 4,
+                    "alignment": "left",
+                    "blockWidth": "50%",
+                    "blockHeight": "340px",
+                    "fitHeightToContent": false,
+                    "boundingBox": true,
+                    "contentPadding": "16px"
+                }
+            },
+            "speakers-block": {
+                "type": "Speakers",
+                "title": "Speakers",
+                "data": {
+                    "heading": "Speakers",
+                    "headingVisibility": true,
+                    "headingAlignment": "center",
+                    "cardBoundingBox": false,
+                    "cardHeight": "400px",
+                    "cardPadding": "24px",
+                    "cardWidth": "220px",
+                    "fitCardHeightToContent": true,
+                    "speakers": [],
+                    "layout": "inline",
+                    "showSpeakersType": "all",
+                    "sortBy": "firstname",
+                    "sortOrder": "ASC",
+                    "speakerBioVisibility": true,
+                    "speakerCompanyVisibility": true,
+                    "speakerJobTitleVisibility": true,
+                    "order": 5,
+                    "alignment": "left",
+                    "blockWidth": "100%",
+                    "blockHeight": "fit-content",
+                    "fitHeightToContent": true,
+                    "boundingBox": false,
+                    "contentPadding": "24px"
+                }
+            },
+            "sponsors-block": {
+                "type": "ImageList",
+                "title": "Sponsors",
+                "data": {
+                    "heading": "Sponsors",
+                    "headingVisibility": true,
+                    "headingAlignment": "center",
+                    "autoScrollEnabled": false,
+                    "autoScrollTimeInterval": null,
+                    "isSlideshow": false,
+                    "spaceBetweenImages": "24px",
+                    "images": [{
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/SYCdw/frame%2023.png"
+                    }, {
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/XiOfB/frame%2025.png"
+                    }, {
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/1WKzZ/frame%2026.png"
+                    }, {
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/MVTDH/frame%2027.png"
+                    }, {
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/GGth5/frame%2028.png"
+                    }, {
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/j6Or4/frame%2029.png"
+                    }, {
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/g951W/frame%2037.png"
+                    }],
+                    "order": 6,
+                    "alignment": "left",
+                    "blockWidth": "100%",
+                    "blockHeight": "130px",
+                    "fitHeightToContent": true,
+                    "boundingBox": true,
+                    "contentPadding": "24px"
+                }
+            }
+        }
+    }
+}

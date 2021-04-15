@@ -4,40 +4,154 @@
     "version": "1.0.0",
     "author": "GSI",
     "keyword": "1-Day, Multi-Track, Conference, Seminar, Meeting, Breakout",
-    "features": "1. 7 templates: Lobby, Main session, Breakout, Speakers, About, Login, 404. 2. Sticky menu 3. Live stream 4. Chat 5. Direct message 6. Participants list 7. Speakers and agenda 8. Content blocks 9. Notifications 10. Responsive template 11. Light and dark mode.",
+    "features": "1. 7 templates: Lobby, Main stage, Breakout, Speakers, About, Login, 404. 2. Sticky menu 3. Live stream 4. Chat 5. Direct message 6. Participants list 7. Speakers and agenda 8. Content blocks 9. Notifications 10. Responsive template 11. Light and dark mode.",
+    "defaultMenus": [{
+        "name": "Header Menu",
+        "items": [{
+            "name": "Lobby",
+            "link": "{{project.name}}-lobby",
+            "openInNewWindow": true
+        }, {
+            "name": "Main Stage",
+            "link": "{{project.name}}-main-stage",
+            "openInNewWindow": true
+        }, {
+            "name": "Breakout",
+            "link": "{{project.name}}-breakout",
+            "openInNewWindow": true
+        }, {
+            "name": "Agenda",
+            "link": "{{project.name}}-agenda",
+            "openInNewWindow": true
+        }, {
+            "name": "Speakers",
+            "link": "{{project.name}}-speakers",
+            "openInNewWindow": true
+        }, {
+            "name": "About",
+            "link": "{{project.name}}-about",
+            "openInNewWindow": true
+        }]
+    }],
     "defaultLivepages": [{
-            "slug": "genesis-lobby",
-            "title": "Genesis - Lobby",
+            "slug": "{{project.name}}-lobby",
+            "title": "Lobby - {{project.name}}",
             "isPublic": false,
             "template": "lobby"
         },
         {
-            "slug": "genesis-main-session",
-            "title": "Genesis - Main Session",
+            "slug": "{{project.name}}-main-stage",
+            "title": "Main Stage - {{project.name}}",
             "isPublic": false,
-            "template": "main-session"
+            "template": "main-stage"
         }, {
-            "slug": "genesis-breakout",
-            "title": "Genesis - Breakout",
+            "slug": "{{project.name}}-breakout",
+            "title": "Breakout - {{project.name}}",
             "isPublic": false,
             "template": "breakout"
         },
         {
-            "slug": "genesis-speakers",
-            "title": "Genesis - Speakers",
+            "slug": "{{project.name}}-agenda",
+            "title": "Agenda - {{project.name}}",
             "isPublic": false,
-            "template": "speakers"
+            "template": "blank",
+            "predefinedBlocks": {
+                "agenda-block": {
+                    "type": "Agenda",
+                    "title": "Agenda",
+                    "data": {
+                        "heading": "Agenda",
+                        "headingVisibility": true,
+                        "headingAlignment": "center",
+                        "blockLayout": "single",
+                        "agendaFromLivePage": "all",
+                        "enableBookmark": true,
+                        "layout": null,
+                        "mode": "light",
+                        "moderatorsVisibility": true,
+                        "panelistsVisibility": true,
+                        "sessionDescription": null,
+                        "sessionDescriptionVisibility": true,
+                        "sessionTitle": "Agenda",
+                        "sessionTitleVisibility": true,
+                        "speakersVisibility": true,
+                        "order": 1,
+                        "alignment": "center",
+                        "blockWidth": "100%",
+                        "blockHeight": "340px",
+                        "fitHeightToContent": false,
+                        "boundingBox": true,
+                        "contentPadding": "18px"
+                    }
+                }
+            }
         },
         {
-            "slug": "genesis-about",
-            "title": "Genesis - About",
+            "slug": "{{project.name}}-speakers",
+            "title": "Speakers - {{project.name}}",
             "isPublic": false,
-            "template": "about"
+            "template": "blank",
+            "predefinedBlocks": {
+                "speakers-block": {
+                    "type": "Speakers",
+                    "title": "Speakers",
+                    "data": {
+                        "heading": "Speakers",
+                        "headingVisibility": true,
+                        "headingAlignment": "center",
+                        "cardBoundingBox": false,
+                        "cardHeight": "400px",
+                        "cardPadding": "24px",
+                        "cardWidth": "220px",
+                        "fitCardHeightToContent": true,
+                        "speakers": [],
+                        "layout": "inline",
+                        "showSpeakersType": "all",
+                        "sortBy": "firstname",
+                        "sortOrder": "ASC",
+                        "speakerBioVisibility": true,
+                        "speakerCompanyVisibility": true,
+                        "speakerJobTitleVisibility": true,
+                        "order": 1,
+                        "alignment": "left",
+                        "blockWidth": "100%",
+                        "blockHeight": "fit-content",
+                        "fitHeightToContent": true,
+                        "boundingBox": false,
+                        "contentPadding": "24px"
+                    }
+                }
+            }
         },
         {
-            "slug": "genesis-404",
-            "title": "Genesis - 404",
-            "isPublic": true,
+            "slug": "{{project.name}}-about",
+            "title": "About - {{project.name}}",
+            "isPublic": false,
+            "template": "blank",
+            "predefinedBlocks": {
+                "about-text-block": {
+                    "type": "RichText",
+                    "title": "About",
+                    "data": {
+                        "heading": "About",
+                        "headingVisibility": true,
+                        "headingAlignment": "center",
+                        "textContent": "<p><strong><span style=\"font-size: 24px;\">About</span></strong></p><p><br></p><p><span style=\"white-space: pre-wrap; font-size: 14px;\"><span style=\"white-space:pre-wrap;\">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span></span></p><p><br></p><p><span style=\"white-space:pre-wrap;\"><span style=\"white-space: pre-wrap; font-size: 24px;\"><strong>Organising Team</strong></span></span></p><p><br></p><p><span style=\"white-space:pre-wrap;\"><span style=\"white-space: pre-wrap; font-size: 14px;\"><span style=\"white-space: pre-wrap;\"><span style=\"white-space:pre-wrap;\">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<br><br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></span></span></span></p>",
+                        "order": 1,
+                        "alignment": "left",
+                        "blockWidth": "100%",
+                        "blockHeight": "fit-content",
+                        "fitHeightToContent": true,
+                        "boundingBox": true,
+                        "contentPadding": "32px"
+                    }
+                }
+            }
+        },
+        {
+            "slug": "{{project.name}}-404",
+            "title": "404 - {{project.name}}",
+            "isPublic": false,
             "template": "404"
         }
     ]

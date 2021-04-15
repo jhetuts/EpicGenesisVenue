@@ -7,30 +7,19 @@
         "enabledWidgets": "*"
     },
     "blocks": {
-        "preventAdd": false,
         "enabledBlocks": "*",
         "predefinedBlocks": {
             "logo-image-block": {
                 "type": "Image",
-                "allowChangeType": {
-                    "SPONSOR": true,
-                    "MANAGER": true
-                },
                 "title": "Logo Image",
-                "preventEdit": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
-                "preventDelete": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
                 "data": {
                     "heading": "Logo Image",
+                    "headingVisibility": false,
+                    "headingAlignment": "center",
                     "autoScrollEnabled": false,
                     "autoScrollTimeInterval": null,
                     "images": [{
-                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/606aab4f55596000920cb94e/780237be-738b-4dbd-9e1b-6e62f3c56199/HtaoB/fill%201.png"
+                        "url": "{{setting.logo}}"
                     }],
                     "isSlideshow": false,
                     "spaceBetweenImages": "0px",
@@ -45,22 +34,12 @@
             },
             "page-title-block": {
                 "type": "RichText",
-                "allowChangeType": {
-                    "SPONSOR": true,
-                    "MANAGER": true
-                },
                 "title": "Page Title",
-                "preventEdit": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
-                "preventDelete": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
                 "data": {
                     "heading": "Page Title",
-                    "textContent": "<p style=\"text-align: center;\"><strong><span style=\"font-size: 24px;\">Digify Conference</span></strong></p>",
+                    "headingVisibility": false,
+                    "headingAlignment": "center",
+                    "textContent": "<p style=\"text-align: center;\"><strong><span style=\"font-size: 24px;\">{{project.name}}</span></strong></p>",
                     "order": 2,
                     "alignment": "left",
                     "blockWidth": "100%",
@@ -72,22 +51,12 @@
             },
             "page-description-block": {
                 "type": "RichText",
-                "allowChangeType": {
-                    "SPONSOR": true,
-                    "MANAGER": true
-                },
                 "title": "Page Description",
-                "preventEdit": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
-                "preventDelete": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
                 "data": {
                     "heading": "Page Description",
-                    "textContent": "<p style=\"text-align: center;\"><span style=\"white-space:pre-wrap;\"><strong><span style=\"font-size: 36px;\">Emerging Technologies and<br>Business Innovation</span></strong></span></p>",
+                    "headingVisibility": false,
+                    "headingAlignment": "center",
+                    "textContent": "<p style=\"text-align: center;\"><span style=\"white-space:pre-wrap;\"><strong><span style=\"font-size: 36px;\">Your Event Tagline Here</span></strong></span></p>",
                     "order": 3,
                     "alignment": "left",
                     "blockWidth": "100%",
@@ -99,28 +68,18 @@
             },
             "hero-block": {
                 "type": "HeroContent",
-                "allowChangeType": {
-                    "SPONSOR": true,
-                    "MANAGER": true
-                },
                 "title": "Hero Content",
-                "preventEdit": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
-                "preventDelete": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
                 "data": {
                     "heading": "Hero Content",
-                    "Description": "A conversation with Neils Nunnez and Jenny Dodds, want to hang around with the hammer squad after hours? Join our Discord server! Featuring giveaways, live twitter feeds, live news from Wowhead",
+                    "headingVisibility": false,
+                    "headingAlignment": "center",
+                    "Description": "Use the hero content block to show some key content prominently. This could be a banner leading to your main session for example.",
                     "DescriptionVisibility": true,
-                    "title": "The Future of Tech and Business Innovation",
+                    "title": "Hero content title",
                     "titleVisibility": true,
                     "coverDisplayType": "video",
                     "coverImage": "",
-                    "coverLivestreamOrVideo": "https://www.youtube.com/embed/rNptBx0cXDc?autoplay=0&mute=0&controls=1&origin=https%3A%2F%2Fmyxp-api-dev.gevme.com&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&widgetid=1",
+                    "coverLivestreamOrVideo": null,
                     "link": "https://www.gevme.com",
                     "order": 4,
                     "alignment": "left",
@@ -133,54 +92,44 @@
             },
             "featured-block": {
                 "type": "FeaturedContent",
-                "allowChangeType": {
-                    "SPONSOR": true,
-                    "MANAGER": true
-                },
-                "title": "Featured Sessions",
-                "preventEdit": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
-                "preventDelete": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
+                "title": "Featured Content",
                 "data": {
-                    "heading": "Featured Sessions",
+                    "heading": "Featured Content",
+                    "headingVisibility": true,
+                    "headingAlignment": "center",
                     "cardBoundingBox": false,
-                    "cardHeight": "320px",
+                    "cardHeight": "400px",
                     "cardPadding": "24px",
-                    "cardWidth": "260px",
+                    "cardWidth": "220px",
                     "fitCardHeightToContent": true,
                     "cardDescriptionVisibility": true,
                     "cardTitleVisibility": true,
                     "featuredcontent": [{
                         "coverDisplayImage": null,
-                        "coverDisplayType": "image",
+                        "coverDisplayType": null,
                         "coverDisplayVideo": null,
-                        "description": "<p>Co-creator Next.js, former CTO and co-founder of LearnBoost and Cloudup, acquired by Wordpress.com in 2013.</p>",
+                        "description": "<p>Add some description about your featured content here.</p>",
                         "link": null,
                         "order": 1,
-                        "title": "Main Session: The Future of Tech and Business Innovation",
+                        "title": "Featured content 1",
                         "visibility": true
                     }, {
                         "coverDisplayImage": null,
                         "coverDisplayType": "image",
                         "coverDisplayVideo": null,
-                        "description": "<p>Co-creator Next.js, former CTO and co-founder of LearnBoost and Cloudup, acquired by Wordpress.com in 2013.</p>",
+                        "description": "<p>Add some description about your featured content here.</p>",
                         "link": null,
                         "order": 2,
-                        "title": "Breakout 1: Chat with the speakers",
+                        "title": "Featured content 2",
                         "visibility": true
                     }, {
                         "coverDisplayImage": null,
                         "coverDisplayType": "image",
                         "coverDisplayVideo": null,
-                        "description": "<p>Co-creator Next.js, former CTO and co-founder of LearnBoost and Cloudup, acquired by Wordpress.com in 2013.</p>",
+                        "description": "<p>Add some description about your featured content here.</p>",
                         "link": null,
                         "order": 3,
-                        "title": "Breakout 2: Fireside chat with the founder",
+                        "title": "Featured content 3",
                         "visibility": true
                     }],
                     "order": 5,
@@ -194,25 +143,15 @@
             },
             "speakers-block": {
                 "type": "Speakers",
-                "allowChangeType": {
-                    "SPONSOR": true,
-                    "MANAGER": true
-                },
                 "title": "Keynote Speakers",
-                "preventEdit": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
-                "preventDelete": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
                 "data": {
                     "heading": "Keynote Speakers",
+                    "headingVisibility": true,
+                    "headingAlignment": "center",
                     "cardBoundingBox": false,
-                    "cardHeight": "320px",
+                    "cardHeight": "400px",
                     "cardPadding": "24px",
-                    "cardWidth": "260px",
+                    "cardWidth": "220px",
                     "fitCardHeightToContent": true,
                     "speakers": [],
                     "layout": "inline",
@@ -233,51 +172,34 @@
             },
             "sponsors-block": {
                 "type": "ImageList",
-                "allowChangeType": {
-                    "SPONSOR": true,
-                    "MANAGER": true
-                },
                 "title": "Sponsors",
-                "preventEdit": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
-                "preventDelete": {
-                    "SPONSOR": false,
-                    "MANAGER": false
-                },
                 "data": {
                     "heading": "Sponsors",
+                    "headingVisibility": true,
+                    "headingAlignment": "center",
                     "autoScrollEnabled": false,
                     "autoScrollTimeInterval": null,
                     "isSlideshow": false,
                     "spaceBetweenImages": "24px",
                     "images": [{
-                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/jprHo/sponsor_1.png",
-                        "link": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/jprHo/sponsor_1.png"
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/SYCdw/frame%2023.png"
                     }, {
-                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/j83Qa/sponsor_2.png",
-                        "link": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/j83Qa/sponsor_2.png"
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/XiOfB/frame%2025.png"
                     }, {
-                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/RLebf/sponsor_3.png",
-                        "link": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/RLebf/sponsor_3.png"
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/1WKzZ/frame%2026.png"
                     }, {
-                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/t2dtj/sponsor_4.png",
-                        "link": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/t2dtj/sponsor_4.png"
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/MVTDH/frame%2027.png"
                     }, {
-                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/SnIfZ/sponsor_5.png",
-                        "link": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/SnIfZ/sponsor_5.png"
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/GGth5/frame%2028.png"
                     }, {
-                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/H2sVR/sponsor_6.png",
-                        "link": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/H2sVR/sponsor_6.png"
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/j6Or4/frame%2029.png"
                     }, {
-                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/7PcX0/sponsor_7.png",
-                        "link": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/5ece3165982a98003d8b1bb2/7PcX0/sponsor_7.png"
+                        "url": "https://files-dev-myxp.s3-ap-southeast-1.amazonaws.com/livestream/Ak8FNuPygYV6X4QpuY21/607564695ff6bc00b3df8eac/d11fa203-2a2f-4ef6-9f99-037ce571e1db/g951W/frame%2037.png"
                     }],
                     "order": 7,
                     "alignment": "left",
                     "blockWidth": "100%",
-                    "blockHeight": "fit-content",
+                    "blockHeight": "130px",
                     "fitHeightToContent": true,
                     "boundingBox": true,
                     "contentPadding": "24px"
