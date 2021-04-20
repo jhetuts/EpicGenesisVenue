@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       try {
         if (window.parent) {
-          console.log(window.parent);
+          console.log("send action logout");
           window.parent.postMessage(
             JSON.stringify({ action: "logout", enableConfirmation: true }),
             "*"
