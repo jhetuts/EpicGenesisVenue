@@ -1,5 +1,4 @@
-$(function(){
-
+$(function () {
   const translations = [
     {
       en: "Please rotate your device",
@@ -9,7 +8,7 @@ $(function(){
       kr: "디바이스를 회전 시켜주세요.",
       zh: "請旋轉您的設備",
       th: "กรุณาหมุนอุปกรณ์ของคุณ",
-      vn: "Vui lòng xoay thiết bị của bạn."
+      vn: "Vui lòng xoay thiết bị của bạn.",
     },
     {
       en: "Herbalife Nutrition Privacy Policy",
@@ -19,7 +18,7 @@ $(function(){
       kr: "허벌라이프 뉴트리션 개인정보보호정책",
       zh: "賀寶芙 隱私政策",
       th: "นโยบายความเป็นส่วนตัวของเฮอร์บาไลฟ์ นิวทริชั่น",
-      vn: "Chính sách bảo mật của Herbalife"
+      vn: "Chính sách bảo mật của Herbalife",
     },
     {
       en: "FAQ",
@@ -29,7 +28,7 @@ $(function(){
       kr: "자주 묻는 질문",
       zh: "常見問與答",
       th: "คำถามที่พบบ่อย",
-      vn: "Câu hỏi thường gặp"
+      vn: "Câu hỏi thường gặp",
     },
     {
       en: "Home",
@@ -39,7 +38,7 @@ $(function(){
       kr: "홈",
       zh: "主頁",
       th: "หน้าหลัก",
-      vn: "Trang chủ"
+      vn: "Trang chủ",
     },
     {
       en: "Arena",
@@ -49,7 +48,7 @@ $(function(){
       kr: "아레나",
       zh: "場館",
       th: "ห้องประชุมหลัก",
-      vn: "Hội trường"
+      vn: "Hội trường",
     },
     {
       en: "Expo",
@@ -59,7 +58,7 @@ $(function(){
       kr: "엑스포",
       zh: "博覽會",
       th: "เอ็กซ์โป",
-      vn: "Khu vực triển lãm"
+      vn: "Khu vực triển lãm",
     },
     {
       en: "Agenda",
@@ -69,7 +68,7 @@ $(function(){
       kr: "아젠다",
       zh: "議程表",
       th: "ตารางการประชุม",
-      vn: "Lịch sự kiện"
+      vn: "Lịch sự kiện",
     },
     {
       en: "Information",
@@ -79,7 +78,7 @@ $(function(){
       kr: "정보",
       zh: "資訊",
       th: "ข้อมูล",
-      vn: "Quầy thông tin"
+      vn: "Quầy thông tin",
     },
     {
       en: "President's Team Lounge",
@@ -89,7 +88,7 @@ $(function(){
       kr: "프레지던트팀 라운지",
       zh: "總裁組休息室",
       th: "เพรสซิเด้นท์ ทีมเลาจ์",
-      vn: "Phòng dành riêng cho Thành Viên Nhóm Chủ Tịch"
+      vn: "Phòng dành riêng cho Thành Viên Nhóm Chủ Tịch",
     },
     {
       en: "HIM Virtual Tour",
@@ -99,7 +98,7 @@ $(function(){
       kr: "HIM 버추얼 투어",
       zh: "HIM 線上之旅",
       th: "HIM Virtual Tour",
-      vn: "Tham quan trực tuyến Nhà máy H.I.M"
+      vn: "Tham quan trực tuyến Nhà máy H.I.M",
     },
     {
       en: "Recognition",
@@ -109,7 +108,7 @@ $(function(){
       kr: "레커니션",
       zh: "表揚",
       th: "การประกาศเกียรติคุณ",
-      vn: "Tuyên dương"
+      vn: "Tuyên dương",
     },
     {
       en: "Breakout Session",
@@ -119,7 +118,7 @@ $(function(){
       kr: "브레이크아웃 룸",
       zh: "分組討論",
       th: "ห้องประชุมย่อย",
-      vn: "Phòng Thảo luận"
+      vn: "Phòng Thảo luận",
     },
     {
       en: "Games",
@@ -129,7 +128,7 @@ $(function(){
       kr: "게임",
       zh: "遊戲",
       th: "เกมส์",
-      vn: "Trò chơi"
+      vn: "Trò chơi",
     },
     {
       en: "HNF",
@@ -139,7 +138,7 @@ $(function(){
       kr: "HNF",
       zh: "賀寶芙慈善基金會",
       th: "HNF",
-      vn: "Quỹ Herbalife Nutrition Foundation (HNF)"
+      vn: "Quỹ Herbalife Nutrition Foundation (HNF)",
     },
     {
       en: "Future Chairman's Club Forum",
@@ -149,7 +148,7 @@ $(function(){
       kr: "퓨처 체어맨스 클럽 포럼",
       zh: "未來主席俱樂部",
       th: "งานประชุม Future Chairman's Club",
-      vn: "Diễn đàn  Câu Lạc Bộ Chủ Tịch Tương Lai"
+      vn: "Diễn đàn  Câu Lạc Bộ Chủ Tịch Tương Lai",
     },
     {
       en: "Training",
@@ -159,36 +158,27 @@ $(function(){
       kr: "트레이닝",
       zh: "訓練",
       th: "เทรนนิ่ง",
-      vn: "Huấn luyện"
-    }
+      vn: "Huấn luyện",
+    },
   ];
 
-  const languages = ["en",
-                     "id",
-                     "jp",
-                     "kh",
-                     "kr",
-                     "zh",
-                     "th",
-                     "vn"]
+  const languages = ["en", "id", "jp", "kh", "kr", "zh", "th", "vn"];
 
   const windowURL = window.location.href.split("showcases")[1].split("/")[1];
   const splitPath = windowURL.split("-");
   const lgInURL = splitPath[splitPath.length - 1];
   const selectedLanguage =
-        splitPath.length > 2
-  ? lgInURL
-  : window.localStorage.getItem("language") || "en";
-  
-  console.log(selectedLanguage);
-  $("#detectLang").removeAttr('class');
-  $("#detectLang").addClass(selectedLanguage);
+    splitPath.length > 2
+      ? lgInURL
+      : window.localStorage.getItem("language") || "en";
 
-  if(languages.includes(selectedLanguage)) {
+  $("#detectLang").addClass("en");
 
+  if (languages.includes(selectedLanguage)) {
+    $("#detectLang").removeAttr("class");
+    $("#detectLang").addClass(selectedLanguage);
     window.localStorage.setItem("language", selectedLanguage);
-  }   else {
-
+  } else {
     window.localStorage.setItem("language", "en");
   }
 
@@ -220,25 +210,26 @@ $(function(){
           elCollection[el] &&
           elCollection[el]?.textContent &&
           translations.filter(
-          (e) =>
-          Object.values(e).filter(
-          (i) =>
-          i.toLowerCase() === elCollection[el]?.textContent?.toLowerCase()
-        ).length && e
-        ).length
+            (e) =>
+              Object.values(e).filter(
+                (i) =>
+                  i.toLowerCase() ===
+                  elCollection[el]?.textContent?.toLowerCase()
+              ).length && e
+          ).length
         ) {
-
           elCollection[el].textContent = translations.filter(
-          (e) =>
-          Object.values(e).filter(
-          (i) =>
-          i.toLowerCase() === elCollection[el]?.textContent?.toLowerCase()
-        ).length && e
-        )[0][language];
-          }
-          }
-          }
-          }
+            (e) =>
+              Object.values(e).filter(
+                (i) =>
+                  i.toLowerCase() ===
+                  elCollection[el]?.textContent?.toLowerCase()
+              ).length && e
+          )[0][language];
+        }
+      }
+    }
+  }
 
   translate(selectedLanguage);
 
@@ -252,14 +243,21 @@ $(function(){
     const baseURL = "https://www.gevme.com/page/";
     const windowURL = window.location.href.split("showcases")[1].split("/")[1];
     const splitPath = windowURL.split("-");
-    const lgInURL = splitPath.length > 2 && splitPath.length < 4  ? splitPath[splitPath.length - 1] : null;
+    const lgInURL =
+      splitPath.length > 2 && splitPath.length < 4
+        ? splitPath[splitPath.length - 1]
+        : null;
 
-    if(!lgInURL) {
-      translate(language)
-      return window.localStorage.setItem('language', language);
+    if (!lgInURL) {
+      translate(language);
+      return window.localStorage.setItem("language", language);
     }
 
-    if (languages.includes(language) && languages.includes(lgInURL) && language !== lgInURL ) {
+    if (
+      languages.includes(language) &&
+      languages.includes(lgInURL) &&
+      language !== lgInURL
+    ) {
       if (splitPath.length > 2) {
         window.open(
           `${baseURL}${windowURL.slice(0, windowURL.length - 3)}-${language}`,
