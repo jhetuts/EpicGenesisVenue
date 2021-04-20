@@ -221,6 +221,14 @@
       </div>
       <div class="relative flex items-center justify-center h-7/12">
         <img class="h-full" src="{{global.baseUrl}}/assets/navigation/user-icon.png" alt="user-icon" id="user">
+        <div class="user-details">
+          <div class="user-basic-details">
+            <p class="user-name">{{user.firstname}} {{user.lastname}}</p>
+            <p class="user-email">{{user.email}}</p>
+            <p class="user-company">{{user.company}}</p>
+          </div>
+          <button id="logout">Logout</button>
+        </div>
       </div>
     </div>
   </div>

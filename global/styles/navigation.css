@@ -31,3 +31,39 @@
 .max-w-auto {
   max-width: none;
 }
+
+#user {
+  cursor: pointer;
+}
+
+.user-details {
+  display: none;
+}
+
+.user-details.active {
+  display: flex;
+  position: absolute;
+  background: #002b58bf;
+  top: calc(100%);
+  right: calc(100% - 39.99px);
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-end;
+  border: 2px solid cyan;
+  color: #fff;
+  font-size: 14px;
+}
+
+.user-basic-details {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  min-width: 250px;
+  border-bottom: 0.5px solid #fff;
+}
+
+.user-details #logout {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #fff;
+  color: #e5e5e5;
+}
