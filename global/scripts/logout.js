@@ -5,17 +5,7 @@ window.addEventListener("DOMContentLoaded", function () {
     console.log(user);
     user.addEventListener("click", function (e) {
       e.preventDefault();
-      try {
-        if (window.parent) {
-          console.log("send action logout");
-          window.parent.postMessage(
-            JSON.stringify({ action: "logout", enableConfirmation: true }),
-            "*"
-          );
-        }
-      } catch (error) {
-        console.error(error);
-      }
+      window.GEVME.utils.logoutUser();
     });
   }
 });
