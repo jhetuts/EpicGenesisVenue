@@ -1,23 +1,139 @@
-{{{global.partials.head-section}}}
-<main class="gevme-template-main {{#if setting.livebar.positionLeft}}livebar-left{{else}}livebar-right{{/if}}">
-    {{#if setting.livebar.enabled}}
-        {{#if setting.livebar.positionLeft}}
-            <div class="gevme-template-chat" {{#if setting.livebar.closable}}style="flex: 0 0 60px;"{{else}}style="flex: 0 0 360px;"{{/if}}>
-                <gevme-live-bar />
-            </div>
-        {{/if}}
-    {{/if}}
-    <div class="gevme-template-content" style="background-image: url('{{setting.backgroundImage}}')">
-        <div class="gevme-content-blocks-container">
-            <gevme-content-block all="true" />
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" id="viewport" content="width=device-width" />
+  <meta name="csrf-token" content="6rAY3FXGUZlfs7frJw3HbOPrMdUchVMbqf5VZzbz">
+  <title>{{livepage.title}} | {{project.name}}</title>
+  <!-- Styles -->
+  <!--  added css -->
+  <link rel="stylesheet" type="text/css" href="{{global.baseUrl}}/styles/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{global.baseUrl}}/styles/global.css">
+  <!--  end -- added css -->
+  <link rel="stylesheet" type="text/css" href="{{global.baseUrl}}/styles/app.css">
+  <link rel="stylesheet" type="text/css" href="{{global.baseUrl}}/styles/fixed-ratio.css">
+  <link rel="stylesheet" type="text/css" href="{{global.baseUrl}}/styles/navigation.css">
+  <!-- Scripts -->
+  <!--  added script -->
+  <script type="text/javascript" src="{{global.baseUrl}}/scripts/jquery.min.js"></script>
+  <script src="{{global.baseUrl}}/scripts/popper.min.js"></script>
+  <script src="{{global.baseUrl}}/scripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{global.baseUrl}}/scripts/detect-language.js" async defer></script>
+  <!--  end -- added script -->
+  <script src="{{global.baseUrl}}/scripts/app.js" defer></script>
+  <script src="{{global.baseUrl}}/scripts/fixed-ratio.js"></script>
+  <script>
+    window.isDesktop = true;
+  </script>
+  <script src="{{global.baseUrl}}/scripts/scene2d-hotspot-loader.js"></script>
+  <script>
+    window.default_hotspot = "";
+  </script>
+  <script>
+    window.addEventListener('hotspot-clicked', (e) => {
+      let {
+        hotspot
+      } = e.detail;
+    });
+  </script>
+</head>
+
+<body id="detectLang" class="en">
+  <div class="full-screen fixed-ratio" style="--width: 1920px; --height: 1080px;">
+    <div id="scene-container" class="active"> {{{global.partials.custom-navbar}}}
+      <video id="background" class="w-full pointer-events-none" muted autoplay playsinline disablePictureInPicture controlsList="nodownload" loop src="https://ae-herbalife-ve-2021.s3.ap-southeast-1.amazonaws.com/assets/789f0674-f423-402a-87bc-05c6ba056150"></video>
+      <div class="hotspot" style="
+    top: 29.722%;
+  left: 21.615%;
+  height: 6.852%;
+  width: 8.906%;
+" data-json-name="lobby" data-hotspot-name="" data-meta="download:https://ae-herbalife-ve-2021.s3.ap-southeast-1.amazonaws.com/assets/b780ade6-21e8-4f51-92e6-7e43a060364f"></div>
+      <a class="hotspot" style="
+    top: 38.981%;
+  left: 13.906%;
+  height: 7.593%;
+  width: 11.094%;
+" data-json-name="lobby" href="#" data-meta="url"></a>
+      <a class="hotspot" style="
+    top: 47.407%;
+  left: 32.865%;
+  height: 8.056%;
+  width: 12.240%;
+" data-json-name="lobby" href="#" data-meta="url"></a>
+      <a class="hotspot" style="
+    top: 67.963%;
+  left: 26.302%;
+  height: 6.019%;
+  width: 10.833%;
+" data-json-name="lobby" href="#" data-meta="url"></a>
+      <a class="hotspot" style="
+    top: 78.241%;
+  left: 46.875%;
+  height: 6.574%;
+  width: 12.188%;
+" data-json-name="lobby" href="https://www.gevme.com/page/extravaganza-fccf-en" data-meta="url"></a>
+      <a class="hotspot" style="
+    top: 82.037%;
+  left: 75.469%;
+  height: 5.648%;
+  width: 8.438%;
+" data-json-name="lobby" href="#" data-meta="url"></a>
+      <a class="hotspot" style="
+    top: 55.741%;
+  left: 55.000%;
+  height: 6.944%;
+  width: 11.146%;
+" data-json-name="lobby" href="#" data-meta="url"></a>
+      <a class="hotspot" style="
+    top: 36.204%;
+  left: 62.292%;
+  height: 6.667%;
+  width: 8.854%;
+" data-json-name="lobby" href="#" data-meta="url"></a>
+      <a class="hotspot" style="
+    top: 24.444%;
+  left: 73.021%;
+  height: 7.130%;
+  width: 10.208%;
+" data-json-name="lobby" href="#" data-meta="url"></a>
+      <a class="hotspot" style="
+    top: 35.370%;
+  left: 90.000%;
+  height: 6.759%;
+  width: 8.958%;
+" data-json-name="lobby" href="#" data-meta="url"></a>
+      <a class="hotspot" style="
+    top: 67.130%;
+  left: 85.260%;
+  height: 6.574%;
+  width: 11.146%;
+" data-json-name="lobby" href="#" data-meta="url"></a>
+      {{{global.partials.custom-footer}}}
     </div>
-    {{#if setting.livebar.enabled}}
-        {{#if setting.livebar.positionRight}}
-            <div class="gevme-template-chat" {{#if setting.livebar.closable}}style="flex: 0 0 60px;"{{else}}style="flex: 0 0 360px;"{{/if}}>
-                <gevme-live-bar />
-            </div>
-        {{/if}}
-    {{/if}}
-</main>
-{{{global.partials.tail-section}}}
+    <div id="middle-layer" class="other-layer">
+      <div id="full-screen-iframe"> </div>
+    </div>
+    <div id="front-layer" class="other-layer">
+      <div id="loading" class="hidden bg-cover active w-full"></div>
+      <div id="welcome-video-selection" class="h-full">
+        <div class="absolute cursor-pointer" style="top: 11%; left: 78%; height: 6%; width: 3%;" onclick="document.getElementById('welcome-video-selection').classList.add('hidden')"></div>
+        <div class="absolute lang-btn" style="top: 25.5%; left: 20%;" onclick="document.getElementById('welcome-video-popup').classList.remove('hidden');document.getElementById('welcome-video').src='https://imas-conference.s3.ap-southeast-1.amazonaws.com/assets/265428fb-2c5b-4d2f-ac15-adc8eaf1b185';"></div>
+        <div class="absolute lang-btn" style="top: 25.5%; left: 40.5%;" onclick="document.getElementById('welcome-video-popup').classList.remove('hidden');document.getElementById('welcome-video').src='https://imas-conference.s3.ap-southeast-1.amazonaws.com/assets/265428fb-2c5b-4d2f-ac15-adc8eaf1b185';"></div>
+        <div class="absolute lang-btn" style="top: 25.5%; left: 61.5%;" onclick="document.getElementById('welcome-video-popup').classList.remove('hidden');document.getElementById('welcome-video').src='https://imas-conference.s3.ap-southeast-1.amazonaws.com/assets/265428fb-2c5b-4d2f-ac15-adc8eaf1b185';"></div>
+        <div class="absolute lang-btn" style="top: 38.5%; left: 20%;" onclick="document.getElementById('welcome-video-popup').classList.remove('hidden');document.getElementById('welcome-video').src='https://imas-conference.s3.ap-southeast-1.amazonaws.com/assets/265428fb-2c5b-4d2f-ac15-adc8eaf1b185';"></div>
+        <div class="absolute lang-btn" style="top: 38.5%; left: 40.5%;" onclick="document.getElementById('welcome-video-popup').classList.remove('hidden');document.getElementById('welcome-video').src='https://imas-conference.s3.ap-southeast-1.amazonaws.com/assets/265428fb-2c5b-4d2f-ac15-adc8eaf1b185';"></div>
+        <div class="absolute lang-btn" style="top: 38.5%; left: 61.5%;" onclick="document.getElementById('welcome-video-popup').classList.remove('hidden');document.getElementById('welcome-video').src='https://imas-conference.s3.ap-southeast-1.amazonaws.com/assets/265428fb-2c5b-4d2f-ac15-adc8eaf1b185';"></div>
+        <div class="absolute lang-btn" style="top: 52%; left: 20%;" onclick="document.getElementById('welcome-video-popup').classList.remove('hidden');document.getElementById('welcome-video').src='https://imas-conference.s3.ap-southeast-1.amazonaws.com/assets/265428fb-2c5b-4d2f-ac15-adc8eaf1b185';"></div>
+        <div class="absolute lang-btn" style="top: 52%; left: 40.5%;" onclick="document.getElementById('welcome-video-popup').classList.remove('hidden');document.getElementById('welcome-video').src='https://imas-conference.s3.ap-southeast-1.amazonaws.com/assets/265428fb-2c5b-4d2f-ac15-adc8eaf1b185';"></div>
+        <div class="absolute lang-btn" style="top: 52%; left: 61.5%;" onclick="document.getElementById('welcome-video-popup').classList.remove('hidden');document.getElementById('welcome-video').src='https://imas-conference.s3.ap-southeast-1.amazonaws.com/assets/265428fb-2c5b-4d2f-ac15-adc8eaf1b185';"></div>
+        <div class="absolute lang-btn" style="top: 65%; left: 30%;" onclick="document.getElementById('welcome-video-popup').classList.remove('hidden');document.getElementById('welcome-video').src='https://imas-conference.s3.ap-southeast-1.amazonaws.com/assets/265428fb-2c5b-4d2f-ac15-adc8eaf1b185';"></div>
+        <div class="absolute lang-btn" style="top: 65%; left: 50.5%;" onclick="document.getElementById('welcome-video-popup').classList.remove('hidden');document.getElementById('welcome-video').src='https://imas-conference.s3.ap-southeast-1.amazonaws.com/assets/265428fb-2c5b-4d2f-ac15-adc8eaf1b185';"></div> <img src="{{global.baseUrl}}/assets/lobby.welcome-video-selection.png"> </div>
+      <div id="welcome-video-popup" class="h-full absolute top-0 hidden">
+        <div class="absolute cursor-pointer" style="top: 11%; left: 78%; height: 6%; width: 3%;" onclick="document.getElementById('welcome-video-popup').classList.add('hidden');document.getElementById('welcome-video').src='../';"></div>
+        <video id="welcome-video" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" style="height: 50%" src="../" controls autoplay autoplay playsinline disablePictureInPicture controlsList="nodownload"></video> <img src="{{global.baseUrl}}/assets/general.pop-up-background.png"> </div>
+    </div>
+  </div>
+</body>
+
+</html>

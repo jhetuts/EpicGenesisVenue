@@ -1,0 +1,33 @@
+@font-face {
+  font-family: HelveticaNeue;
+
+  src: url(https://github.com/GEVME/venue-herbalife-extravaganza-2021/blob/acaabee7110bb85b51ce16a4e656dfdbe399d9a4/global/assets/navigation/HelveticaNeue.ttc);
+}
+
+#navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6.875rem;
+  font-family: HelveticaNeue;
+}
+
+#navigation-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.home-item:hover .home-item\:block,
+.language-item:hover .language-item\:block {
+  display: block;
+}
+
+.max-w-auto {
+  max-width: none;
+}

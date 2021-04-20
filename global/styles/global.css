@@ -1,0 +1,111 @@
+@font-face {
+  font-family: KhmerOS;
+  src: url(https://files-myxp.gevme.com/fonts/hbl-fonts/KhmerOS.ttf);
+}
+@font-face {
+  font-family: NanumGothic;
+  src: url(https://files-myxp.gevme.com/fonts/hbl-fonts/NanumGothic-Regular.ttf);
+}
+@font-face {
+  font-family: ArialUnicode;
+  src: url(https://files-myxp.gevme.com/fonts/hbl-fonts/Arial%20Unicode.ttf);
+}
+
+@font-face {
+  font-family: Lantingzhonghei;
+  src: url(https://files-myxp.gevme.com/fonts/hbl-fonts/Lantingzhonghei.TTF);
+}
+
+html {
+  font-family: "Open Sans Montserrat Times New Roman";
+  font-size: 16px;
+}
+
+body.en #navigation span,
+body.vn #navigation span,
+body.id #navigation span {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+body.vn #navigation span {
+  font-size: 1.25rem;
+}
+
+body.id #navigation span {
+  font-size: 1.75rem;
+}
+
+body.jp #navigation span {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック" , "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
+  font-size: 1.69rem;
+}
+
+body.kh #navigation span {
+  font-family: KhmerOS;
+  font-size: 1.34rem;
+}
+
+body.kr #navigation span {
+  font-family: NanumGothic;
+}
+
+body.th #navigation span {
+  font-family: ArialUnicode;
+  font-size: 1.5rem;
+}
+
+body.zh #navigation span {
+  font-family: Lantingzhonghei;
+}
+
+body .active-lang > img {
+  display: none;
+}
+
+body.en .active-lang > img.en,
+body.kr .active-lang > img.kr,
+body.kh .active-lang > img.kh,
+body.zh .active-lang > img.zh,
+body.id .active-lang > img.id,
+body.th .active-lang > img.th,
+body.jp .active-lang > img.jp,
+body.vn .active-lang > img.vn {
+  display: block;
+}
+
+.gevme-template-main.home .gevme-template-content {
+  background-image: none !important;
+  overflow: unset !important;
+}
+.gevme-template-main.home {
+  display: block !important;
+  overflow: hidden;
+}
+.success-img img {
+  width: 100%;
+}
+
+body.id .lh {
+  line-height: 1.8;
+}
+
+body.jp .lh {
+  line-height: 1.9;
+}
+
+body.th .lh,
+body.vn .lh,
+body.kh .lh {
+  line-height: 2.5;
+}
+
+.modal-content {
+  background-color: transparent;
+}
+
+.modal-body {
+  background-color: rgba(0,0,0,0.4);
+}
+
+a:hover {
+  text-decoration: none;
+}
