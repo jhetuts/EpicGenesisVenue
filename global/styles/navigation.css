@@ -32,6 +32,10 @@
   max-width: none;
 }
 
+#user {
+  cursor: pointer;
+}
+
 .user-details {
   display: none;
 }
