@@ -32,8 +32,6 @@ try {
       iframe.loading = 'lazy'
       iframe.referrerPolicy = 'no-referrer'
       iframe.src = `${redirectBaseURI}/chat?s=${settings}`
-      iframe.width = width
-      iframe.height = height
       iframe.frameBorder = '0'
       this.append(iframe)
       this.addEventListener('message', handleMessage)
