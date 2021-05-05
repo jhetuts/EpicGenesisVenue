@@ -12,7 +12,14 @@ try {
       e.preventDefault()
       const vid = document.createElement('video')
       vid.src = data.src
+      vid.controls = true
+      vid.autoplay = true
+      vid.playsinline = true
+      vid.disablepictureinpicture = true
+      vid.controlslist = 'nodownload'
+      vid.draggable = 'false'
       vid.setAttribute('data-matomo-title', data.title)
+      vid.setAttribute(' data-matomo-resource', data.src)
       vidWrap.append(vid)
 
       vid.addEventListener('loadedmetadata', function () {
