@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" id="viewport" content="width=device-width" />
+  <meta name="csrf-token" content="6rAY3FXGUZlfs7frJw3HbOPrMdUchVMbqf5VZzbz">
+  <title>{{livepage.title}} | {{project.name}}</title>
+  <!-- Styles -->
+  <!--  added css -->
+  <link rel="stylesheet" type="text/css" href="{{global.baseUrl}}/styles/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{global.baseUrl}}/styles/global.css">
+  <!--  end -- added css -->
+  <link rel="stylesheet" type="text/css" href="{{global.baseUrl}}/styles/app.css">
+  <link rel="stylesheet" type="text/css" href="{{global.baseUrl}}/styles/fixed-ratio.css">
+  <link rel="stylesheet" type="text/css" href="{{global.baseUrl}}/styles/navigation.css">
+  <link rel="stylesheet" type="text/css" href="{{project.baseUrl}}/styles/style.css">
+  <!-- Scripts -->
+  <!--  added script -->
+  <script type="text/javascript" src="{{global.baseUrl}}/scripts/jquery.min.js"></script>
+  <script src="{{global.baseUrl}}/scripts/popper.min.js"></script>
+  <script src="{{global.baseUrl}}/scripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{global.baseUrl}}/scripts/detect-language.js" async defer></script>
+  <!--  end -- added script -->
+  <script src="{{global.baseUrl}}/scripts/app.js" defer></script>
+  <script src="{{global.baseUrl}}/scripts/logout.js" defer></script>
+  <script src="{{global.baseUrl}}/scripts/fixed-ratio.js"></script>
+  <script>
+    window.isDesktop = true;
+  </script>
+  <script src="{{global.baseUrl}}/scripts/scene2d-hotspot-loader.js"></script>
+  <script>
+    window.default_hotspot = "";
+  </script>
+  <script>
+    window.addEventListener('hotspot-clicked', (e) => {
+      let {
+        hotspot
+      } = e.detail;
+    });
+  </script>
+</head>
+
+<body id="detectLang" class="en">
+  <div class="video-container"></div>
+  <button id="btn-video-modal">Open Modal</button>
+  <script src="{{project.baseUrl}}/scripts/analytics.js" defer></script>
+</body>
+
+</html>
