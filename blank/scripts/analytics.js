@@ -30,6 +30,7 @@ try {
           window.Matomo.MediaAnalytics.scanForMedia &&
           window.Matomo.MediaAnalytics.isMediaAnalyticsEnabled()
         ) {
+          console.log('scan')
           window.Matomo.MediaAnalytics.scanForMedia()
         }
       })
