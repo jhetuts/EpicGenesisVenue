@@ -14,7 +14,7 @@ try {
     }
 
     connectedCallback() {
-      var settings = JSON.parse(this.getAttribute('settings'))
+      var settings = this.getAttribute('settings')
       var iframe = document.createElement('iframe'),
         redirectBaseURI = window.location.href.includes('env=localhost')
           ? 'http://localhost:3001/widgets'
