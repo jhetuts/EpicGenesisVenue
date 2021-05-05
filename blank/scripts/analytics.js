@@ -19,7 +19,7 @@ try {
       vid.controlslist = 'nodownload'
       vid.draggable = 'false'
       vid.setAttribute('data-matomo-title', data.title)
-      vid.setAttribute(' data-matomo-resource', data.src)
+      vid.setAttribute('data-matomo-resource', data.src)
       vidWrap.append(vid)
 
       vid.addEventListener('loadedmetadata', function () {
