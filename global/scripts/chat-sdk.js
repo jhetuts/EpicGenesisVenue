@@ -14,7 +14,7 @@ try {
     }
 
     connectedCallback() {
-      var settings = this.getAttribute('settings')
+      var settings = JSON.parse(this.getAttribute('settings'))
       var iframe = document.createElement('iframe'),
         redirectBaseURI = window.location.href.includes('env=localhost')
           ? 'http://localhost:3001/widgets'
@@ -31,7 +31,9 @@ try {
       iframe.seamless = true
       iframe.loading = 'lazy'
       iframe.referrerPolicy = 'no-referrer'
-      iframe.src = `${redirectBaseURI}/chat?s=${settings}`
+      iframe.src = `${redirectBaseURI}/chat?s=${encodeURI(
+        JSON.stringify(settings),
+      )}`
       iframe.frameBorder = '0'
       this.append(iframe)
       this.addEventListener('message', this.handleMessage)
