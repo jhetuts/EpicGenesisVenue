@@ -34,7 +34,7 @@ try {
       iframe.src = `${redirectBaseURI}/chat?s=${settings}`
       iframe.frameBorder = '0'
       this.append(iframe)
-      this.addEventListener('message', handleMessage)
+      this.addEventListener('message', this.handleMessage)
     }
   }
   window.customElements.define('gevme-chat', GevmeChat)
