@@ -23,16 +23,10 @@ try {
       vidWrap.append(vid)
 
       vid.addEventListener('loadedmetadata', function () {
-        if (
-          window.Matomo &&
-          window.Matomo.MediaAnalytics &&
-          window.Matomo.MediaAnalytics.enableMediaAnalytics &&
-          window.Matomo.MediaAnalytics.scanForMedia &&
-          window.Matomo.MediaAnalytics.isMediaAnalyticsEnabled()
-        ) {
-          console.log('scan')
-          window.Matomo.MediaAnalytics.scanForMedia()
-        }
+        setTimeout(() => {
+          console.log('will scan')
+          window.GEVME.utils.enableMatomoMediaTracking()
+        }, 5000)
       })
     })
   }
