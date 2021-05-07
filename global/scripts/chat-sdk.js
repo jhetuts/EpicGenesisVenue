@@ -13,6 +13,10 @@ try {
       }
     }
 
+    windowEventListener() {
+      window.addEventListener('message', this.handleMessage)
+    }
+
     connectedCallback() {
       var settings = JSON.parse(this.getAttribute('settings'))
       var iframe = document.createElement('iframe'),
@@ -44,7 +48,7 @@ try {
         this.removeAttribute(this.attributes[0].name)
 
       this.append(iframe)
-      this.addEventListener('message', this.handleMessage)
+      this.windowEventListener()
     }
   }
   window.customElements.define('gevme-chat', GevmeChat)
