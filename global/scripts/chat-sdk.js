@@ -14,14 +14,14 @@ try {
               'position: fixed; z-index: 1; left: 0; right: unset; top: 0px; bottom: 0px; margin: auto;'
           } else {
             chat.style =
-              'position: fixed; z-index: 1; left: -200%; right: unset; top: 0px; bottom: 0px; margin: auto;'
+              'position: fixed; z-index: 1; left: unset; right: 0; top: 0px; bottom: 0px; margin: auto;'
           }
         }
 
         if (dataObj && !dataObj.open) {
           var chat = document.querySelector('iframe#GevmeChat')
-          chat.style.left = '-200%'
-          chat.style.right = unset
+          chat.style =
+            'position: fixed; z-index: 1; left: -200%; right: unset; top: 0px; bottom: 0px; margin: auto;'
         }
       } catch (error) {
         console.error(error)
