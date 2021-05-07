@@ -10,15 +10,18 @@ try {
         if (dataObj && dataObj.open) {
           var chat = document.querySelector('iframe#GevmeChat')
           if (dataObj.position && dataObj.position === 'left') {
-            chat.style = 'left: 0; right: unset;'
+            chat.style.left = 0
+            chat.style.right = 'unset'
           } else {
-            chat.style = 'right: 0; left: unset;'
+            chat.style.left = unset
+            chat.style.right = 0
           }
         }
 
         if (dataObj && !dataObj.open) {
           var chat = document.querySelector('iframe#GevmeChat')
-          chat.style = 'left: -200%; right: unset;'
+          chat.style.left = '-200%'
+          chat.style.right = unset
         }
       } catch (error) {
         console.error(error)
