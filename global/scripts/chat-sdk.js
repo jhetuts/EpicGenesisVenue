@@ -10,11 +10,11 @@ try {
         if (dataObj && dataObj.open) {
           var chat = document.querySelector('iframe#GevmeChat')
           if (dataObj.position && dataObj.position === 'left') {
-            chat.style.left = 0
-            chat.style.right = 'unset'
+            chat.style =
+              'position: fixed; z-index: 1; left: 0; right: unset; top: 0px; bottom: 0px; margin: auto;'
           } else {
-            chat.style.left = unset
-            chat.style.right = 0
+            chat.style =
+              'position: fixed; z-index: 1; left: -200%; right: unset; top: 0px; bottom: 0px; margin: auto;'
           }
         }
 
@@ -57,7 +57,7 @@ try {
       iframe.height = settings?.height || '100%'
       iframe.frameBorder = '0'
       iframe.style =
-        'position: fixed; z-index: 1; left: -200%; top: 0; bottom: 0; margin: auto;'
+        'position: fixed; z-index: 1; left: -200%; right: unset; top: 0; bottom: 0; margin: auto;'
 
       while (this.attributes.length > 0)
         this.removeAttribute(this.attributes[0].name)
