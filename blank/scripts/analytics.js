@@ -23,10 +23,8 @@ try {
       vidWrap.append(vid)
 
       vid.addEventListener('loadedmetadata', function () {
-        setTimeout(() => {
-          console.log('will scan')
-          window.GEVME.utils.enableMatomoMediaTracking()
-        }, 5000)
+        console.log('will scan')
+        window.GEVME.utils.enableMatomoMediaTracking()
       })
     })
   }
