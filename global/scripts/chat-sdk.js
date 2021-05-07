@@ -40,8 +40,8 @@ try {
       iframe.style =
         'position: fixed; z-index: 1; left: -200%; top: 0; bottom: 0; margin: auto;'
 
-      while (iframe.attributes.length > 0)
-        iframe.removeAttribute(iframe.attributes[0].name)
+      while (this.attributes.length > 0)
+        this.removeAttribute(this.attributes[0].name)
 
       this.append(iframe)
       this.addEventListener('message', this.handleMessage)
