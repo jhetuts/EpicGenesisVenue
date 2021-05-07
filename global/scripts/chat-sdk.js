@@ -34,7 +34,14 @@ try {
       iframe.src = `${redirectBaseURI}/chat?s=${encodeURI(
         JSON.stringify(settings),
       )}`
+      iframe.width = settings?.width || '300px'
+      iframe.height = settings?.height || '100%'
       iframe.frameBorder = '0'
+      iframe.style = 'position: fixed; z-index: 1; left: -200%;'
+
+      while (iframe.attributes.length > 0)
+        iframe.removeAttribute(iframe.attributes[0].name)
+
       this.append(iframe)
       this.addEventListener('message', this.handleMessage)
     }
