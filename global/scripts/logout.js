@@ -1,11 +1,12 @@
 window.addEventListener('DOMContentLoaded', function () {
   const user = document.querySelector('#user')
   const logout = document.querySelector('#logout')
-  const GevmeChatIframe = document.querySelector('#GevmeChat')
 
   if (user) {
     user.addEventListener('click', function (e) {
       e.preventDefault()
+      const GevmeChatIframe = document.querySelector('#GevmeChat')
+
       const userDetails = document.querySelector('.user-details')
       if (userDetails) {
         userDetails.classList.toggle('active')
