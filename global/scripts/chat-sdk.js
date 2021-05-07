@@ -37,7 +37,8 @@ try {
       iframe.width = settings?.width || '300px'
       iframe.height = settings?.height || '100%'
       iframe.frameBorder = '0'
-      iframe.style = 'position: fixed; z-index: 1; left: -200%;'
+      iframe.style =
+        'position: fixed; z-index: 1; left: -200%; top: 0; bottom: 0; margin: auto;'
 
       while (iframe.attributes.length > 0)
         iframe.removeAttribute(iframe.attributes[0].name)
