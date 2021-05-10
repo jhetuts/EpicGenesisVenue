@@ -1,30 +1,33 @@
 window.addEventListener('DOMContentLoaded', function () {
   const user = document.querySelector('#user')
-  const logout = document.querySelector('#logout')
 
   if (user) {
     user.addEventListener('click', function (e) {
       e.preventDefault()
-      const GevmeChatIframe = document.querySelector('#GevmeChat')
+      const logout = document.querySelector('#logout')
+      const chat = document.querySelector('#chat')
 
       const userDetails = document.querySelector('.user-details')
       if (userDetails) {
         userDetails.classList.toggle('active')
       }
 
-      if (GevmeChatIframe) {
-        GevmeChatIframe.contentWindow.postMessage(
-          JSON.stringify({ action: 'open', type: 'chat' }),
-          '*',
-        )
+      if (logout) {
+        logout.addEventListener('click', function (e) {
+          e.preventDefault()
+          window.GEVME.utils.logoutUser()
+        })
       }
-    })
-  }
 
-  if (logout) {
-    logout.addEventListener('click', function (e) {
-      e.preventDefault()
-      window.GEVME.utils.logoutUser()
+      if (chat) {
+        const GevmeChatIframe = document.querySelector('#GevmeChat')
+        if (GevmeChatIframe) {
+          GevmeChatIframe.contentWindow.postMessage(
+            JSON.stringify({ action: 'open', type: 'chat' }),
+            '*',
+          )
+        }
+      }
     })
   }
 })
