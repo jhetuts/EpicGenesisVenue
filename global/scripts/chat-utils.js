@@ -8,7 +8,7 @@ function handleMessage(e){
   
 }
 
-function handleDMSent(user) {
+function handleDMSent(userId) {
   const userObjects = {
     "ovSyhRNGI0Mb916gz7":  {
       company: "",
@@ -32,7 +32,7 @@ function handleDMSent(user) {
     }
   }
 
-  const user = userObjects[user?.target?.id]
+  const user = userObjects[userId?.target?.id]
   console.log(user)
 }
 
