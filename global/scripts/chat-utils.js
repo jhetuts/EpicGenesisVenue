@@ -33,7 +33,14 @@ function handleDMSent(userId) {
   }
 
   const user = userObjects[userId.target.dataset.id]
-  console.log(user)
+  const GevmeChatIframe = document.querySelector('#GevmeChat')
+      
+  if (GevmeChatIframe) {
+    GevmeChatIframe.contentWindow.postMessage(
+      JSON.stringify({ action: 'open', type: 'single-chat', user }),
+      '*',
+    )
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function(){
