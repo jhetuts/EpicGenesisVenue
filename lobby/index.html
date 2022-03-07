@@ -43,15 +43,32 @@
 
 <body id="detectLang" class="en">
   <div class="full-screen fixed-ratio" style="--width: 1920px; --height: 1080px;">
-    <div id="scene-container" class="active">
+    <div id="scene-container" class="active" style="display: flex;flex-direction: column;height: 100%;width: 100%;">
       {{{global.partials.custom-navbar}}}
-    </div>
-    <div id="middle-layer" class="other-layer">
-      <div id="full-screen-iframe">
-        <div class="action-buttons">
-          <button class="gevme-dm-messages">Direct Messages</button>
-          <button class="gevme-dm-messages-one-on-one">John Doe</button>
+      <div class="content" style="
+          display: flex;
+          width: 100%;
+          height: 100%;
+      ">
+        <div class="field" style="
+          width: 100%;
+      ">
+
+          <button class="gevme-dm-messages-one-on-one" data-id="ovSyhRNGI0Mb916gz7">Casey</button>
+
+          <button class="gevme-dm-messages-one-on-one" data-id="093Ulzricncn51XxmK">Mich</button>
+
         </div>
+        <div class="action-buttons" style="
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      ">
+          <button class="gevme-dm-messages">Direct Messages</button>
+        </div>
+
       </div>
     </div>
   </div>
