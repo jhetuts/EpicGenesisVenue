@@ -109,3 +109,7 @@ body.kh .lh {
 a:hover {
   text-decoration: none;
 }
+
+iframe#GevmeChat.chat-open {
+  right: 100px;
+}
