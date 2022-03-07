@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function(){
   const user = document.querySelector('#user')
   const dmButton = document.querySelector('.gevme-dm-messages')
   const dmButtons = document.querySelectorAll('.gevme-dm-messages-one-on-one')
-  const GevmeChatIframe = document.querySelector('#GevmeChat')
   
 
 
@@ -53,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function(){
       e.preventDefault()
       
       const userDetails = document.querySelector('.user-details')
+      const GevmeChatIframe = document.querySelector('#GevmeChat')
 
       if (userDetails) {
         userDetails.classList.toggle('active')
@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function(){
   if (dmButton) {
     dmButton.addEventListener('click', function (e) {
       e.preventDefault()
+      const GevmeChatIframe = document.querySelector('#GevmeChat')
       
       if (GevmeChatIframe) {
         GevmeChatIframe.contentWindow.postMessage(
