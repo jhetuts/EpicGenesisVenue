@@ -8,6 +8,34 @@ function handleMessage(e){
   
 }
 
+function handleDMSent(user) {
+  const userObjects = {
+    "ovSyhRNGI0Mb916gz7":  {
+      company: "",
+      country: "",
+      firstname: "Casey",
+      id: "ovSyhRNGI0Mb916gz7",
+      isOnboarded: false,
+      jobTitle: "",
+      lastname: "Ong",
+      projectId: "6225c830216bc102013c437c",
+    },
+    "093Ulzricncn51XxmK": {
+      company: "",
+      country: "",
+      firstname: "Michelle",
+      id: "093Ulzricncn51XxmK",
+      isOnboarded: false,
+      jobTitle: "",
+      lastname: "Cruz",
+      projectId: "6225c830216bc102013c437c",
+    }
+  }
+
+  const user = userObjects[user?.target?.id]
+  console.log(user)
+}
+
 document.addEventListener('DOMContentLoaded', function(){
   if(window) {
      window.addEventListener('message', handleMessage)
@@ -15,7 +43,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
   const user = document.querySelector('#user')
   const dmButton = document.querySelector('.gevme-dm-messages')
+  const dmButtons = document.querySelectorAll('.gevme-dm-messages-one-on-one')
   const GevmeChatIframe = document.querySelector('#GevmeChat')
+  
 
 
   if (user) {
@@ -38,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   if (dmButton) {
-    user.dmButton('click', function (e) {
+    dmButton.addEventListener('click', function (e) {
       e.preventDefault()
       
       if (GevmeChatIframe) {
@@ -47,6 +77,14 @@ document.addEventListener('DOMContentLoaded', function(){
           '*',
         )
       }
+    })
+  }
+
+  if (dmButtons && dmButtons.length)
+  {
+    dmButtons.forEach(dm => {
+      dm.removeEventListener('click', handleDMSent)
+      dm.addEventListener('click', handleDMSent)
     })
   }
 
