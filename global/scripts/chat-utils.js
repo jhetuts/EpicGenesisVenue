@@ -32,7 +32,7 @@ function handleDMSent(userId) {
     }
   }
 
-  const user = userObjects[userId?.target?.id]
+  const user = userObjects[userId.target.dataset.id]
   console.log(user)
 }
 
