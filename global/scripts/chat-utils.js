@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function(){
      window.addEventListener('message', handleMessage)
   }
 
-  const user = document.querySelector('#user')
+  const mainChat = document.querySelector('.gevme-main-chat')
   const dmButton = document.querySelector('.gevme-dm-messages')
   const dmButtons = document.querySelectorAll('.gevme-dm-messages-one-on-one')
 
@@ -57,19 +57,26 @@ document.addEventListener('DOMContentLoaded', function(){
       e.preventDefault()
       
       const userDetails = document.querySelector('.user-details')
-      const GevmeChatIframe = document.querySelector('#GevmeChat')
 
       if (userDetails) {
         userDetails.classList.toggle('active')
       }
-
-      if (GevmeChatIframe) {
-        GevmeChatIframe.contentWindow.postMessage(
-          JSON.stringify({ action: 'open', type: 'chat' }),
-          '*',
-        )
-      }
     })
+  }
+
+  if (mainChat) {
+    mainChat.addEventListener('click', function (e) {
+      e.preventDefault()
+    
+      const GevmeChatIframe = document.querySelector('#GevmeChat')
+      if (GevmeChatIframe) {
+          GevmeChatIframe.contentWindow.postMessage(
+            JSON.stringify({ action: 'open', type: 'chat' }),
+            '*',
+          )
+        }
+
+    });
   }
 
   if (dmButton) {
@@ -86,8 +93,7 @@ document.addEventListener('DOMContentLoaded', function(){
     })
   }
 
-  if (dmButtons && dmButtons.length)
-  {
+  if (dmButtons && dmButtons.length) {
     dmButtons.forEach(dm => {
       dm.removeEventListener('click', handleDMSent)
       dm.addEventListener('click', handleDMSent)
