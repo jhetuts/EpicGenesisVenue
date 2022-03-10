@@ -93,11 +93,11 @@ main h1 {
 }
 
 gevme-people-directory {
-    position: absolute;
+    position: fixed;
     right: -200%;
     min-width: 1024px;
     max-width: 1024px;
-    transition: all ease-in-out 200;
+    transition: all ease-in-out 200ms;
     background: #193420;
     height: auto;
     padding: 20px;
@@ -107,7 +107,7 @@ gevme-people-directory {
 gevme-people-directory.open-directory {
     left: 50%;
     transform: translateX(-50%);
-    transition: all ease-in-out 200;
+    transition: all ease-in-out 200ms;
 }
 
 iframe#GevmeChat.chat-open {
