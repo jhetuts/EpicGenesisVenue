@@ -95,6 +95,9 @@ main h1 {
 }
 
 gevme-people-directory {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   min-width: 1024px;
   max-width: 1024px;
