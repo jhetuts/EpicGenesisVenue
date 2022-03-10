@@ -1,5 +1,5 @@
 body {
-  background: #00000059;
+  background: #1e2630;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -28,6 +28,7 @@ main {
 
 main h1 {
   margin: 0;
+  color: #000;
 }
 
 .content {
@@ -42,10 +43,11 @@ main h1 {
   padding: 20px;
   display: flex;
   position: relative;
+  background-color: #fff;
 }
 
 .right-nav {
-  padding: 10px;
+  padding-left: 20px;
   display: flex;
   justify-content: center;
 }
