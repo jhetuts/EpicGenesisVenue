@@ -81,6 +81,21 @@ main h1 {
   cursor: pointer;
 }
 
+button.gevme-dm-messages.new-message {
+  position: relative;
+}
+
+button.gevme-dm-messages.new-message::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background: red;
+  border-radius: 100%;
+  top: 4px;
+  right: 4px;
+}
+
 .avatars button {
   margin-bottom: 0;
   margin-right: 10px;

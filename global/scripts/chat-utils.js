@@ -1,7 +1,11 @@
 function handleMessage(e){
   try{
     const dataObj = JSON.parse(event.data);
-    console.log('dataObj: ', dataObj)
+    if (dataObj && dataObj.chatUpdate && dataObj.chatUpdate === 'new message')
+    {
+      const dmButton = document.querySelector('.gevme-dm-messages')
+      dmButton.classList.add('new-message')
+    }
   } catch(e) {
     console.error(e?.name + ': ', e?.message)
   }
@@ -85,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function(){
   if (dmButton) {
     dmButton.addEventListener('click', function (e) {
       e.preventDefault()
+      dmButton.classList.remove('new-message')
       const GevmeChatIframe = document.querySelector('#GevmeChat')
       
       if (GevmeChatIframe) {
