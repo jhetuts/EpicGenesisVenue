@@ -59,24 +59,12 @@ document.addEventListener('DOMContentLoaded', function(){
     {
       e.preventDefault();
       const peopleWrap = document.querySelector('gevme-people-directory')
-      
+
       if (peopleWrap) {
         peopleWrap.classList.toggle('open-directory')
       }
     })
     
-  }
-
-  if (user) {
-    user.addEventListener('click', function (e) {
-      e.preventDefault()
-      
-      const userDetails = document.querySelector('.user-details')
-
-      if (userDetails) {
-        userDetails.classList.toggle('active')
-      }
-    })
   }
 
   if (mainChat) {
