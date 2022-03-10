@@ -93,7 +93,7 @@ main h1 {
 
 gevme-people-directory {
     position: absolute;
-    left: -200%;
+    right: -200%;
     min-width: 1024px;
     max-width: 1024px;
     transition: all ease-in-out 200;
