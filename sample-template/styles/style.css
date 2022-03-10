@@ -111,7 +111,7 @@ gevme-people-directory.open-directory {
 }
 
 iframe#GevmeChat.chat-open {
-  right: 100px;
+  right: 120px !important;
 }
 
 .dVQtFi {
