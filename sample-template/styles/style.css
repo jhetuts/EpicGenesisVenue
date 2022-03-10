@@ -22,6 +22,11 @@ main {
   height: 100%;
   width: 100%;
   padding: 20px;
+  flex-direction: column;
+}
+
+main h1 {
+  margin: 0;
 }
 
 .content {
@@ -50,6 +55,7 @@ main {
   justify-content: space-around;
   height: 100%;
   overflow: hidden;
+  width: 100%;
 }
 
 .action-buttons {
@@ -69,6 +75,16 @@ main {
   width: 76px;
   height: 76px;
   border-radius: 100%;
+  cursor: pointer;
+}
+
+.avatars button {
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+.avatars button:last-child {
+  margin-right: 10px;
 }
 
 .action-buttons button:last-child {
@@ -76,8 +92,23 @@ main {
 }
 
 gevme-people-directory {
-  position: fixed;
-  left: -200%;
-  top: 50%;
-  transform: translateY(-50%);
+    position: absolute;
+    left: -200%;
+    min-width: 1024px;
+    max-width: 1024px;
+    transition: all ease-in-out 200;
+    background: #193420;
+    height: auto;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+gevme-people-directory.open-directory {
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all ease-in-out 200;
+}
+
+iframe#GevmeChat.chat-open {
+  right: 100px;
 }
