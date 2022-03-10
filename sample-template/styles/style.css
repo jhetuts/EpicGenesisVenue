@@ -1,7 +1,74 @@
-.action-buttons {
-  color: #fff;
+body {
+  background: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+header,
+footer {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+footer {
+  border-top: 1px solid #eee;
+}
+
+main {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.left-content {
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  position: relative;
+}
+
+.right-nav {
+  padding: 10px;
+  display: flex;
   justify-content: center;
+}
+
+.avatars {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  overflow: hidden;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+
+.action-buttons button {
+  border: 1px solid #ccc;
+  background: #eee;
+  margin-bottom: 10px;
+  width: 76px;
+  height: 76px;
+  border-radius: 100%;
+}
+
+.action-buttons button:last-child {
+  margin-bottom: 0;
 }
