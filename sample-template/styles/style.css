@@ -95,21 +95,30 @@ main h1 {
 }
 
 gevme-people-directory {
-    position: fixed;
-    right: -200%;
-    min-width: 1024px;
-    max-width: 1024px;
-    transition: all ease-in-out 200ms;
-    background: #193420;
-    height: auto;
-    padding: 20px;
-    border-radius: 4px;
+  position: fixed;
+  min-width: 1024px;
+  max-width: 1024px;
+  transition: all ease-in-out 200ms;
+  height: auto;
+  padding: 20px;
+  width: 100%;
+  border-radius: 4px;
+  top: 0;
+  right: -200%;
+  left: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 gevme-people-directory.open-directory {
-    left: 50%;
-    transform: translateX(-50%);
-    transition: all ease-in-out 200ms;
+  right: 0;
+  transition: all ease-in-out 200ms;
+}
+
+iframe[name="GevmePeopleDirectory"] {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #193421;
 }
 
 iframe#GevmeChat.chat-open {
