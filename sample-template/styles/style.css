@@ -55,11 +55,13 @@ main {
 .action-buttons {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: end;
   height: 100%;
   width: 100%;
+  flex-direction: column;
 }
 
+.avatars button,
 .action-buttons button {
   border: 1px solid #ccc;
   background: #eee;
@@ -71,4 +73,11 @@ main {
 
 .action-buttons button:last-child {
   margin-bottom: 0;
+}
+
+gevme-people-directory {
+  position: fixed;
+  left: -200%;
+  top: 50%;
+  transform: translateY(-50%);
 }
