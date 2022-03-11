@@ -126,6 +126,7 @@ gevme-people-directory {
   left: 0;
   bottom: 0;
   margin: auto;
+  height: 440px;
 }
 
 gevme-people-directory.open-directory {
