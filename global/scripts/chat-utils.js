@@ -56,10 +56,21 @@ document.addEventListener('DOMContentLoaded', function(){
   const dmButton = document.querySelector('.gevme-dm-messages')
   const dmButtons = document.querySelectorAll('.gevme-dm-messages-one-on-one')
   const gevmePeopleDirectoryBtn = document.querySelector('.gevme-people-directory')
+  const closeButton = document.querySelector('.close-button')
 
-  if (gevmePeopleDirectoryBtn)
+  if (gevmePeopleDirectoryBtn && closeButton)
   {
     gevmePeopleDirectoryBtn.addEventListener('click', function (e)
+    {
+      e.preventDefault();
+      const peopleWrap = document.querySelector('gevme-people-directory')
+
+      if (peopleWrap) {
+        peopleWrap.classList.toggle('open-directory')
+      }
+    })
+
+    closeButton.addEventListener('click', function (e)
     {
       e.preventDefault();
       const peopleWrap = document.querySelector('gevme-people-directory')

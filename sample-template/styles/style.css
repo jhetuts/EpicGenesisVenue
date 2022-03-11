@@ -134,6 +134,21 @@ gevme-people-directory.open-directory {
   transition: all ease-in-out 200ms;
 }
 
+gevme-people-directory .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
 iframe[name="GevmePeopleDirectory"] {
   padding: 10px;
   border-radius: 4px;
