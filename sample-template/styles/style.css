@@ -126,7 +126,7 @@ gevme-people-directory {
   left: 0;
   bottom: 0;
   margin: auto;
-  height: 80%;
+  height: 100%;
 }
 
 gevme-people-directory.open-directory {
@@ -153,6 +153,7 @@ iframe[name="GevmePeopleDirectory"] {
   padding: 10px;
   border-radius: 4px;
   background-color: #193421;
+  height: 100% !important;
 }
 
 iframe#GevmeChat.chat-open {
