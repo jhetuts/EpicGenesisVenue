@@ -115,7 +115,7 @@ gevme-people-directory {
   justify-content: center;
   position: fixed;
   min-width: 1024px;
-  max-width: 1024px;
+  max-width: 100%;
   transition: all ease-in-out 200ms;
   height: auto;
   padding: 20px;
@@ -126,7 +126,7 @@ gevme-people-directory {
   left: 0;
   bottom: 0;
   margin: auto;
-  height: 440px;
+  height: 80%;
 }
 
 gevme-people-directory.open-directory {
