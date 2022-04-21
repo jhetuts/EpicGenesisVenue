@@ -19,5 +19,5 @@ function callback(data) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
- establishedConnection(callback) 
+ establishedConnection(callback)
 })
